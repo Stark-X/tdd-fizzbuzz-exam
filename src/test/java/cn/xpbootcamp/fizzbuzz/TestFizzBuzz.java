@@ -65,4 +65,15 @@ public class TestFizzBuzz {
             assertThat(result, equalTo("FizzWhizz"));
         }
     }
+
+    @Test
+    void should_return_fizz_when_count_off_given_number_is_divisible_by_5_and_7() {
+        List<Integer> numbers = Arrays.asList(35, 70);
+
+        for (Integer number : numbers) {
+            FizzBuzz fizzBuzz = new FizzBuzz(number);
+            String result = fizzBuzz.countOff();
+            assertThat(result, equalTo("BuzzWhizz"));
+        }
+    }
 }
