@@ -8,27 +8,23 @@ public class FizzBuzz {
     }
 
     public String countOff() {
-        if (isDivisibleBy(3) && isDivisibleBy(5) && isDivisibleBy(7)) {
-            return "FizzBuzzWhizz";
-        }
-        if (isDivisibleBy(3) && isDivisibleBy(5)) {
-            return "FizzBuzz";
-        }
-        if (isDivisibleBy(3) && isDivisibleBy(7)) {
-            return "FizzWhizz";
-        }
-        if (isDivisibleBy(5) && isDivisibleBy(7)) {
-            return "BuzzWhizz";
-        }
+        StringBuilder stringBuilder = new StringBuilder();
         if (isDivisibleBy(3)) {
-            return "Fizz";
+            stringBuilder.append("Fizz");
         }
+
         if (isDivisibleBy(5)) {
-            return "Buzz";
+            stringBuilder.append("Buzz");
         }
+
         if (isDivisibleBy(7)) {
-            return "Whizz";
+            stringBuilder.append("Whizz");
         }
+
+        if (stringBuilder.length() != 0) {
+            return String.valueOf(stringBuilder);
+        }
+
         return String.valueOf(number);
     }
 
