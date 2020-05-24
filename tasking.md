@@ -43,3 +43,11 @@
 - AND `number` is divisible by `7`
 - When count off
 - Then `FizzBuzzWhizz` should be replied
+
+## Rule 3
+
+- Given `number` is not divisible by `3`
+- And `number` is not divisible by `5`
+- And `number` is not divisible by `7`
+- When count off
+- Then `number` itself should be replied
