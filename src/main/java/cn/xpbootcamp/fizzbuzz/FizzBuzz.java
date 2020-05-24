@@ -8,6 +8,9 @@ public class FizzBuzz {
     }
 
     public String countOff() {
+        if (isDivisibleBy(3) && isDivisibleBy(5) && isDivisibleBy(7)) {
+            return "FizzBuzzWhizz";
+        }
         if (isDivisibleBy(3) && isDivisibleBy(5)) {
             return "FizzBuzz";
         }
