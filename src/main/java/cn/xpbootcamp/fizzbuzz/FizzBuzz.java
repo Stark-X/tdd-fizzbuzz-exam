@@ -8,21 +8,25 @@ public class FizzBuzz {
     }
 
     public String countOff() {
-        if (number % 3 == 0 && number % 5 == 0) {
+        if (isDivisibleBy(3) && isDivisibleBy(5)) {
             return "FizzBuzz";
         }
-        if (number % 3 == 0 && number % 7 == 0) {
+        if (isDivisibleBy(3) && isDivisibleBy(7)) {
             return "FizzWhizz";
         }
-        if (number % 3 == 0) {
+        if (isDivisibleBy(3)) {
             return "Fizz";
         }
-        if (number % 5 == 0) {
+        if (isDivisibleBy(5)) {
             return "Buzz";
         }
-        if (number % 7 == 0) {
+        if (isDivisibleBy(7)) {
             return "Whizz";
         }
         return String.valueOf(number);
+    }
+
+    private boolean isDivisibleBy(int divisor) {
+        return number % divisor == 0;
     }
 }
