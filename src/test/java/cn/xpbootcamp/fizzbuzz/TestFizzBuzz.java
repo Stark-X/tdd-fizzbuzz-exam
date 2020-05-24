@@ -32,4 +32,15 @@ public class TestFizzBuzz {
             assertThat(result, equalTo("Buzz"));
         }
     }
+
+    @Test
+    void should_return_fizz_when_count_off_given_number_is_divisible_by_7() {
+        List<Integer> numbers = Arrays.asList(7, 14);
+
+        for (Integer number : numbers) {
+            FizzBuzz fizzBuzz = new FizzBuzz(number);
+            String result = fizzBuzz.countOff();
+            assertThat(result, equalTo("Whizz"));
+        }
+    }
 }
